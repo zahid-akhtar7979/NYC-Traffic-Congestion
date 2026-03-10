@@ -1,0 +1,15 @@
+# Bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual envs
+.venv/
+venv/
+.env
+
+# IDE / OS
+.idea/
+.DS_Store
+*.swp
+*.swo

@@ -361,11 +361,12 @@ def run_analyze_pg(conn) -> None:
 
 
 def run_analyze_mysql(conn) -> None:
-    """Run ANALYZE TABLE on MySQL."""
+    """Run ANALYZE TABLE on MySQL. Consume all results to avoid 'Unread result found'."""
     cur = conn.cursor()
     for t in ["Fact_CRZ_Entries", "Fact_Ridership", "Dim_Date", "Dim_Time", "Dim_Vehicle_Class", "Dim_Location", "Dim_Transport_Mode", "Dim_Station", "Dim_Entrance"]:
         try:
             cur.execute(f"ANALYZE TABLE {t};")
+            cur.fetchall()  # consume result so commit can proceed
         except Exception:
             pass
     conn.commit()
