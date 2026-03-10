@@ -29,7 +29,8 @@ def _get_mysql_config():
     user = os.environ.get("MYSQLUSER") or os.environ.get("MYSQL_USER", "root")
     password = os.environ.get("MYSQLPASSWORD") or os.environ.get("MYSQL_PASSWORD", "root")
     database = os.environ.get("MYSQLDATABASE") or os.environ.get("MYSQL_DATABASE", "benchmark_mysql")
-    return {"host": host, "port": port, "user": user, "password": password, "database": database}
+    return {"host": host, "port": port, "user": user, "password": password, "database": database,"allow_public_key_retrieval": True,
+        "ssl_disabled": False,}
 
 
 def get_postgres_connection():
