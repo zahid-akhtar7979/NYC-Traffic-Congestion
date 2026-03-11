@@ -1,20 +1,20 @@
 """
 Benchmark runner: executes queries on PostgreSQL and MySQL,
 repeats each query 5 times with one warm-up run, computes average execution time.
-Results saved to data/benchmark_results.csv.
+Results are saved to data/benchmark_results.csv.
 """
 import os
 import sys
 import time
+import csv
+from datetime import datetime
 
 # Ensure project root is on path when run as script
 _here = os.path.dirname(os.path.abspath(__file__))
 _root = os.path.dirname(_here)
 if _root not in sys.path:
     sys.path.insert(0, _root)
-import csv
-import os
-from datetime import datetime
+
 from backend.db_connections import get_postgres_connection, get_mysql_connection
 from backend.queries import BENCHMARK_QUERIES
 
