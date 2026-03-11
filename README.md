@@ -82,6 +82,11 @@ Then open the dashboard at **http://localhost:8501**.
 4. Apply schema scripts, then optionally: `python data_loader/load_data.py`
 5. Run dashboard: `PYTHONPATH=. streamlit run frontend/dashboard.py`
 
+## Documentation
+
+- **[Project Report (Findings, Challenges, Recommendations)](docs/PROJECT_REPORT.md)** — Design alignment, tool rationale, challenges faced and resolutions, and recommendations.
+- **[Railway Deployment](docs/RAILWAY_DEPLOYMENT.md)** — Steps to deploy the app and databases on Railway.
+
 ## Version Control
 
 Commits are split by: project structure → database scripts → backend → frontend → Docker and docs.
