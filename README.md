@@ -85,6 +85,7 @@ Then open the dashboard at **http://localhost:8501**.
 ## Documentation
 
 - **[Project Report (Findings, Challenges, Recommendations)](docs/PROJECT_REPORT.md)** — Design alignment, tool rationale, challenges faced and resolutions, and recommendations.
+- **[Benchmark Comparison Report (MySQL vs PostgreSQL)](docs/BENCHMARK_COMPARISON_REPORT.md)** — Extended benchmark results: simple filter, GROUP BY, 3-table JOIN, window functions, CTE, index impact, data ingestion.
 - **[Railway Deployment](docs/RAILWAY_DEPLOYMENT.md)** — Steps to deploy the app and databases on Railway.
 
 ## Version Control
